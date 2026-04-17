@@ -6,12 +6,12 @@ JetBrains' web presence embodies the philosophy of its IDEs: **precision, clarit
 
 The canvas is predominantly white (`#ffffff`) or light gray (`#f7f8fa`), creating a clean backdrop that lets content and code take center stage. Text is rendered in a deep near-black (`#27282e`) that provides excellent contrast without the harshness of pure black. The color system is built around a **structured palette of semantic grays** (`#dfe1e5`, `#6f737a`, `#9a9da3`) with purposeful accent colors for interactive states and brand identity.
 
-**JetBrains Sans**, the custom corporate typeface, anchors the visual language with geometric clarity and excellent screen readability. For code and technical content, **JetBrains Mono**—the open-source monospaced font designed specifically for developers—provides distinctive character shapes, true italics for select glyphs, and optimized letterforms for extended reading sessions [[52]].
+**JetBrains Sans**, the custom corporate typeface, anchors the visual language with geometric clarity and excellent screen readability. For code and technical content, **JetBrains Mono**—the open-source monospaced font designed specifically for developers—provides distinctive character shapes, true italics for select glyphs, and optimized letterforms for extended reading sessions.
 
 What distinguishes JetBrains' visual language is its **functional minimalism**: borders are crisp 1px lines (`#dfe1e5` in light mode), shadows are subtle and purposeful rather than decorative, and interactive elements use clear visual affordances without excessive embellishment. The system embraces **dark mode as a first-class citizen**, with a parallel token system that maintains contrast ratios and visual hierarchy in low-light environments.
 
 **Key Characteristics:**
-- JetBrains Sans (corporate) + JetBrains Mono (code) typography pairing [[50]]
+- JetBrains Sans (corporate) + JetBrains Mono (code) typography pairing
 - Cool-neutral palette: grays with blue undertones (`#f7f8fa`, `#27282e`, `#6f737a`)
 - Primary accent: JetBrains Blue (`#3369d6` / `#366acf` dark mode) as the singular interactive color
 - Crisp 1px borders: `1px solid #dfe1e5` (light) / `1px solid #6f737a` (dark)
@@ -25,7 +25,7 @@ What distinguishes JetBrains' visual language is its **functional minimalism**: 
 ## 2. Color Palette & Roles
 
 ### Primary Brand
-- **JetBrains Blue** (`#3369d6` Light / `#366acf` Dark): Primary CTA, active links, interactive accents—the only saturated color in core UI chrome [[39]]
+- **JetBrains Blue** (`#3369d6` Light / `#366acf` Dark): Primary CTA, active links, interactive accents—the only saturated color in core UI chrome
 - **JetBrains Black** (`#27282e`): Primary text, headings, body copy. Optimized for readability on white backgrounds
 - **Pure White** (`#ffffff`): Page background, card surfaces, button text on blue
 - **Content Background** (`#f7f8fa` Light / `#2b2d30` Dark): Section backgrounds, sidebar surfaces, subtle elevation layers
@@ -85,14 +85,14 @@ box-shadow: 0 2px 8px rgba(0, 0, 0, 0.32), 0 1px 2px rgba(0, 0, 0, 0.24);
 
 ### Font Families
 - **Primary UI**: `JetBrains Sans, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif`
-- **Code/Technical**: `JetBrains Mono, 'Fira Code', 'Source Code Pro', monospace` [[54]]
+- **Code/Technical**: `JetBrains Mono, 'Fira Code', 'Source Code Pro', monospace`
 - **Fallback Stack**: System fonts optimized for cross-platform consistency
 
 ### OpenType Features (JetBrains Mono)
 - `ss01`: Symmetrical lowercase `l` for improved character distinction
 - `ss02`: Curly tail on `t` for enhanced readability
 - `cv01-cv10`: Contextual alternates for punctuation and symbols
-- `lnum`: Lining numerals for tabular data alignment [[49]]
+- `lnum`: Lining numerals for tabular data alignment
 
 ### Type Scale & Hierarchy
 
@@ -109,7 +109,7 @@ box-shadow: 0 2px 8px rgba(0, 0, 0, 0.32), 0 1px 2px rgba(0, 0, 0, 0.24);
 | **Code Block** | JetBrains Mono | 0.875rem (14px) | 400 | 1.5 | normal | Multi-line code examples |
 
 ### Typography Principles
-- **Developer-first legibility**: JetBrains Mono's character shapes prioritize distinction between similar glyphs (`0`/`O`, `1`/`l`/`I`) [[52]]
+- **Developer-first legibility**: JetBrains Mono's character shapes prioritize distinction between similar glyphs (`0`/`O`, `1`/`l`/`I`)
 - **Weight hierarchy**: 400 (body), 500 (UI), 600 (titles), 700 (headlines)—avoiding excessive weight variation
 - **Line height scaling**: Tighter leading for headlines (1.1–1.2), relaxed for body (1.5) to improve scanability
 - **Code integration**: Monospaced fonts used contextually for technical content, never for UI chrome
@@ -324,7 +324,7 @@ letter-spacing: 0.01em;
 - **Asymmetric balance**: Slightly more bottom margin than top on headings for optical alignment
 - **Code-friendly density**: Technical content blocks use tighter line-height (1.4–1.5) but generous surrounding margins
 
-### Border Radius Scale [[39]]
+### Border Radius Scale
 | Token | Value | Use Case |
 |-------|-------|----------|
 | `Corner Radius/XS` | 2px | Checkbox borders, tiny UI details |
@@ -466,10 +466,10 @@ letter-spacing: 0.01em;
 - **Dark Mode Toggle**: "Implement theme switch: respect `prefers-color-scheme` default. Provide manual toggle with sun/moon icons. Store preference in `localStorage`. Transition colors with `0.2s ease` on `background-color`, `color`, `border-color`."
 
 ### Iteration Guide
-1. **Always use the dual-mode token system**: Every color has explicit Light/Dark definitions—never hardcode hex values without checking dark mode equivalents [[39]]
+1. **Always use the dual-mode token system**: Every color has explicit Light/Dark definitions—never hardcode hex values without checking dark mode equivalents
 2. **Corner radii follow the 2→4→8→12→16→20→24 scale**: Use semantic tokens (`Corner Radius/M`) not hardcoded pixels
 3. **JetBrains Blue is the only saturated accent**: Reserve `#3369d6` for primary actions and active states; use semantic colors (success/warning/error) for system feedback only
-4. **Typography pairs Sans + Mono intentionally**: Use JetBrains Sans for UI chrome, JetBrains Mono exclusively for code/technical content [[54]]
+4. **Typography pairs Sans + Mono intentionally**: Use JetBrains Sans for UI chrome, JetBrains Mono exclusively for code/technical content
 5. **Shadows are functional, not decorative**: Use elevation levels purposefully—Level 1 for cards, Level 2 for modals, never for static content
 6. **Spacing is systematic**: Use the 4px base unit scale; avoid arbitrary values like 13px or 19px
 7. **Accessibility is non-negotiable**: All interactive elements must have visible focus states; contrast ratios must meet WCAG AA minimum

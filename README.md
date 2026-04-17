@@ -23,9 +23,10 @@ This repository houses comprehensive, implementation-ready design system specifi
 
 ## Available Design Systems
 
-| Design System | Source Inspiration | Key Features | Status |
-|--------------|------------------|-------------|--------|
-| [**JetBrains-Inspired**](./DESIGN-JETBRAINS.md) | [jetbrains.com](https://www.jetbrains.com) | Developer-first typography, JetBrains Mono, dual-mode tokens, functional minimalism | ✅ Complete |
+| Design System | Source Inspiration | Status |
+|--------------|------------------|--------|
+| [**JetBrains-Inspired**](./DESIGN-JETBRAINS.md) | [jetbrains.com](https://www.jetbrains.com) | ✅ Complete |
+| [**Nuxt-Inspired**](./DESIGN-NUXT.md) | [nuxt.com](https://nuxt.com) | ✅ Complete |
 
 ---
 
