@@ -28,6 +28,7 @@ This repository houses comprehensive, implementation-ready design system specifi
 | [**JetBrains-Inspired**](./DESIGN-JETBRAINS.md) | [jetbrains.com](https://www.jetbrains.com) | ✅ Complete |
 | [**Neon-Inspired**](./DESIGN-NEON.md) | [neon.com](https://neon.com) | ✅ Complete |
 | [**Nuxt-Inspired**](./DESIGN-NUXT.md) | [nuxt.com](https://nuxt.com) | ✅ Complete |
+| [**Logto-Inspired**](./DESIGN-LOGTO.md) | [logto.io](https://logto.io) | ✅ Complete |
 
 ---
 
