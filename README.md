@@ -31,6 +31,7 @@ This repository houses comprehensive, implementation-ready design system specifi
 | [**Neon-Inspired**](./DESIGN-NEON.md) | [neon.com](https://neon.com) | ✅ Complete |
 | [**Node.js-Inspired**](./DESIGN-NODEJS.md) | [nodejs.org](https://nodejs.org) | ✅ Complete |
 | [**Nuxt-Inspired**](./DESIGN-NUXT.md) | [nuxt.com](https://nuxt.com) | ✅ Complete |
+| [**Pnpm-Inspired**](./DESIGN-PNPM.md) | [pnpm.io](https://pnpm.io) | ✅ Complete |
 
 ---
 
