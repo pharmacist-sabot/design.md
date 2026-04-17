@@ -25,6 +25,7 @@ This repository houses comprehensive, implementation-ready design system specifi
 
 | Design System | Source Inspiration | Status |
 |--------------|------------------|--------|
+| [**Codemod-Inspired**](./DESIGN-CODEMOD.md) | [codemod.com](https://codemod.com) | ✅ Complete |
 | [**Dataforest-Inspired**](./DESIGN-DATAFOREST.md) | [dataforest.net](https://cloud.dataforest.net) | ✅ Complete |
 | [**JetBrains-Inspired**](./DESIGN-JETBRAINS.md) | [jetbrains.com](https://www.jetbrains.com) | ✅ Complete |
 | [**Logto-Inspired**](./DESIGN-LOGTO.md) | [logto.io](https://logto.io) | ✅ Complete |
