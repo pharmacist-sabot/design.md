@@ -27,9 +27,10 @@ This repository houses comprehensive, implementation-ready design system specifi
 |--------------|------------------|--------|
 | [**Dataforest-Inspired**](./DESIGN-DATAFOREST.md) | [dataforest.net](https://cloud.dataforest.net) | ✅ Complete |
 | [**JetBrains-Inspired**](./DESIGN-JETBRAINS.md) | [jetbrains.com](https://www.jetbrains.com) | ✅ Complete |
-| [**Neon-Inspired**](./DESIGN-NEON.md) | [neon.com](https://neon.com) | ✅ Complete |
-| [**Nuxt-Inspired**](./DESIGN-NUXT.md) | [nuxt.com](https://nuxt.com) | ✅ Complete |
 | [**Logto-Inspired**](./DESIGN-LOGTO.md) | [logto.io](https://logto.io) | ✅ Complete |
+| [**Neon-Inspired**](./DESIGN-NEON.md) | [neon.com](https://neon.com) | ✅ Complete |
+| [**Node.js-Inspired**](./DESIGN-NODEJS.md) | [nodejs.org](https://nodejs.org) | ✅ Complete |
+| [**Nuxt-Inspired**](./DESIGN-NUXT.md) | [nuxt.com](https://nuxt.com) | ✅ Complete |
 
 ---
 
