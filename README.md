@@ -33,6 +33,7 @@ This repository houses comprehensive, implementation-ready design system specifi
 | [**Node.js-Inspired**](./DESIGN-NODEJS.md) | [nodejs.org](https://nodejs.org) | ✅ Complete |
 | [**Nuxt-Inspired**](./DESIGN-NUXT.md) | [nuxt.com](https://nuxt.com) | ✅ Complete |
 | [**Pnpm-Inspired**](./DESIGN-PNPM.md) | [pnpm.io](https://pnpm.io) | ✅ Complete |
+| [**Zed-Inspired**](./DESIGN-ZED.md) | [zed.dev](https://zed.dev) | ✅ Complete |
 
 ---
 
