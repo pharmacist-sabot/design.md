@@ -129,6 +129,6 @@ You must:
 ## Get in Touch
 
 - **Suggest a design system**: Open an Issue with the product name and URL
-- **Report an issue**: Use the [Issues tab](https://github.com/pharmacist-sabot/design.md/issues)
-- **Discuss ideas**: Start a [Discussion](https://github.com/pharmacist-sabot/design.md/discussions)
+- **Report an issue**: Use the [Issues tab](https://github.com/suradet-ps/design.md/issues)
+- **Discuss ideas**: Start a [Discussion](https://github.com/suradet-ps/design.md/discussions)
 
