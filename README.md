@@ -46,6 +46,7 @@ Open `out/index.html` in your browser after running `build`.
 |--------------|------|--------|
 | [Codemod](./designs/codemod/DESIGN.md) | `designs/codemod/` | ✅ Complete |
 | [Dataforest](./designs/dataforest/DESIGN.md) | `designs/dataforest/` | ✅ Complete |
+| [El Patita](./designs/elpatita/DESIGN.md) | `designs/elpatita/` | ✅ Complete |
 | [JetBrains](./designs/jetbrains/DESIGN.md) | `designs/jetbrains/` | ✅ Complete |
 | [Logto](./designs/logto/DESIGN.md) | `designs/logto/` | ✅ Complete |
 | [Neon](./designs/neon/DESIGN.md) | `designs/neon/` | ✅ Complete |
