@@ -2,58 +2,93 @@
 
 ![License](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)
 ![Status](https://img.shields.io/badge/status-active-brightgreen.svg?style=flat-square)
-![Contributions](https://img.shields.io/badge/contributions-welcome-orange.svg?style=flat-square)
+![Rust](https://img.shields.io/badge/rust-1.80+-orange.svg?style=flat-square)
 
-> A curated collection of production-ready design system documentation, inspired by world-class products and engineered for developer experience.
+> A curated collection of production-ready design system documentation, inspired by world-class products — with a Rust CLI to manage, lint, and generate a static site.
 
 ---
 
 ## Overview
 
-This repository houses comprehensive, implementation-ready design system specifications. Each design document is crafted to mirror the visual language, interaction patterns, and engineering principles of leading software products—translated into actionable guidelines for designers and developers.
+This repository houses comprehensive, implementation-ready design system specifications organized under `designs/`. Each design is in its own directory (`designs/<name>/DESIGN.md`) and follows a consistent 9-section structure.
 
-**Why this exists:**
-- Reference-quality design tokens, components, and patterns
-- Developer-friendly specifications with CSS-ready values
-- Systematic approach to spacing, typography, color, and elevation
-- Accessibility-first: WCAG-compliant contrast and focus management
-- Dual-mode support: Light and Dark mode token definitions
-
----
-
-## Available Design Systems
-
-| Design System | Source Inspiration | Status |
-|--------------|------------------|--------|
-| [**Codemod-Inspired**](./DESIGN-CODEMOD.md) | [codemod.com](https://codemod.com) | ✅ Complete |
-| [**Dataforest-Inspired**](./DESIGN-DATAFOREST.md) | [dataforest.net](https://cloud.dataforest.net) | ✅ Complete |
-| [**JetBrains-Inspired**](./DESIGN-JETBRAINS.md) | [jetbrains.com](https://www.jetbrains.com) | ✅ Complete |
-| [**Logto-Inspired**](./DESIGN-LOGTO.md) | [logto.io](https://logto.io) | ✅ Complete |
-| [**Neon-Inspired**](./DESIGN-NEON.md) | [neon.com](https://neon.com) | ✅ Complete |
-| [**Node.js-Inspired**](./DESIGN-NODEJS.md) | [nodejs.org](https://nodejs.org) | ✅ Complete |
-| [**Nuxt-Inspired**](./DESIGN-NUXT.md) | [nuxt.com](https://nuxt.com) | ✅ Complete |
-| [**Pnpm-Inspired**](./DESIGN-PNPM.md) | [pnpm.io](https://pnpm.io) | ✅ Complete |
-| [**Zed-Inspired**](./DESIGN-ZED.md) | [zed.dev](https://zed.dev) | ✅ Complete |
+The [`design-md`](./) CLI tool (written in Rust) helps you:
+- **List** all available design systems
+- **Lint** them for structural issues and WCAG contrast compliance
+- **Build** a beautiful static documentation site
+- **Scaffold** new design systems from a template
 
 ---
 
 ## Quick Start
 
-### Using a Design System
+```bash
+# List all designs
+cargo run -- list
 
-1. **Browse** the design specification file (e.g., `DESIGN-JETBRAINS.md`)
-2. **Extract tokens** from the Color Palette or Typography sections
-3. **Implement components** using the provided CSS snippets and guidelines
-4. **Adapt** spacing, radius, and elevation scales to your project needs
+# Lint all designs
+cargo run -- lint
+
+# Generate static site
+cargo run -- build
+
+# Scaffold a new design
+cargo run -- new <name> --source <url>
+```
+
+Open `out/index.html` in your browser after running `build`.
+
+---
+
+## Available Design Systems
+
+| Design System | Path | Status |
+|--------------|------|--------|
+| [Codemod](./designs/codemod/DESIGN.md) | `designs/codemod/` | ✅ Complete |
+| [Dataforest](./designs/dataforest/DESIGN.md) | `designs/dataforest/` | ✅ Complete |
+| [JetBrains](./designs/jetbrains/DESIGN.md) | `designs/jetbrains/` | ✅ Complete |
+| [Logto](./designs/logto/DESIGN.md) | `designs/logto/` | ✅ Complete |
+| [Neon](./designs/neon/DESIGN.md) | `designs/neon/` | ✅ Complete |
+| [Node.js](./designs/nodejs/DESIGN.md) | `designs/nodejs/` | ✅ Complete |
+| [Nuxt](./designs/nuxt/DESIGN.md) | `designs/nuxt/` | ✅ Complete |
+| [Pnpm](./designs/pnpm/DESIGN.md) | `designs/pnpm/` | ✅ Complete |
+| [Zed](./designs/zed/DESIGN.md) | `designs/zed/` | ✅ Complete |
+
+---
+
+## CLI Reference
+
+### `design-md list`
+Lists all design systems found under `designs/`, showing name, source, and section count.
+
+### `design-md show <name>`
+Display a summary of a specific design system with its sections.
+
+### `design-md lint [--fix]`
+Validates all designs against:
+- **Structure**: All 9 required sections present
+- **Contrast**: WCAG AA (4.5:1) ratio compliance for color pairs
+
+### `design-md build [--out-dir <path>]`
+Generates a static HTML site from all designs:
+- Responsive grid index with search/filter
+- Individual design pages with rendered Markdown
+- Dark/light mode support
+- Full-text search index (`search.json`)
+
+### `design-md new <name> --source <url>`
+Scaffolds a new design system:
+- Creates `designs/<name>/DESIGN.md` from template
+- Pre-fills source URL and name
 
 ---
 
 ## Design System Structure
 
-Each design specification follows a consistent, navigable structure:
+Each design follows a consistent structure with 9 sections:
 
 ```
-DESIGN-[PRODUCT].md
+designs/<product>/DESIGN.md
 ├── 1. Visual Theme & Atmosphere    # Philosophy, key characteristics
 ├── 2. Color Palette & Roles        # Tokens, semantic colors, states
 ├── 3. Typography Rules             # Fonts, scale, hierarchy, OpenType
@@ -67,19 +102,24 @@ DESIGN-[PRODUCT].md
 
 ---
 
-## Key Principles
+## Project Structure
 
-### For Designers
-- **Consistency over creativity**: Reuse tokens, don't invent new values
-- **Hierarchy through scale**: Let typography and spacing communicate importance
-- **Subtlety in depth**: Shadows and borders should support, not distract
-- **Accessibility by default**: Contrast, focus, and motion preferences are non-negotiable
-
-### For Developers
-- **Tokens first**: Use CSS custom properties for all design values
-- **Responsive by design**: Implement fluid type and spacing with `clamp()`
-- **Dark mode ready**: Structure styles to support `prefers-color-scheme`
-- **Performance conscious**: Prefer CSS transitions over JS animations
+```
+.
+├── Cargo.toml              # Rust project config
+├── src/
+│   ├── main.rs             # CLI entry point
+│   ├── commands/           # CLI command implementations
+│   ├── lint/               # Lint validators (structure, contrast)
+│   ├── site/               # Static site generator (renderer, assets)
+│   ├── models.rs           # Core data structures
+│   └── utils.rs            # Design discovery, markdown parsing
+├── designs/                # All design system files
+│   └── <name>/DESIGN.md
+├── template/               # Template for new designs
+├── out/                    # Generated site output (gitignored)
+└── README.md
+```
 
 ---
 
@@ -89,20 +129,12 @@ We welcome contributions! Whether you're fixing a typo, adding a new component, 
 
 1. **Fork** the repository
 2. **Create** a feature branch (`git checkout -b feature/add-figma-system`)
-3. **Follow** the existing structure and formatting conventions
-4. **Test** your changes locally (preview the Markdown)
-5. **Submit** a Pull Request with a clear description
-
-### Adding a New Design System
-
-1. Create a new file: `DESIGN-[PRODUCT].md`
-2. Use the [template structure](#-design-system-structure) above
-3. Include all 9 sections with detailed, implementation-ready content
-4. Update the [Available Design Systems](#-available-design-systems) table
-5. Add relevant badges to the top of your file (optional)
+3. **Use** `cargo run -- new <name> --source <url>` to scaffold
+4. **Fill in** the 9 sections with implementation-ready content
+5. **Run** `cargo run -- lint` to validate
+6. **Submit** a Pull Request with a clear description
 
 ### Contribution Guidelines
-
 - ✅ Use English for all documentation
 - ✅ Include hex codes, CSS snippets, and token names
 - ✅ Specify both Light and Dark mode values where applicable
@@ -113,7 +145,7 @@ We welcome contributions! Whether you're fixing a typo, adding a new component, 
 
 ## License
 
-This project is licensed under the **MIT License**—see the [LICENSE](./LICENSE) file for details.
+This project is licensed under the **MIT License**.
 
 You are free to:
 - ✅ Use these design specifications in personal or commercial projects
@@ -131,4 +163,3 @@ You must:
 - **Suggest a design system**: Open an Issue with the product name and URL
 - **Report an issue**: Use the [Issues tab](https://github.com/suradet-ps/design.md/issues)
 - **Discuss ideas**: Start a [Discussion](https://github.com/suradet-ps/design.md/discussions)
-
